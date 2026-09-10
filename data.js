@@ -2,13 +2,27 @@ window.siteData = {
   productsTitle: "Ürün Gruplarımız",
   servicesTitle: "Servis & Bakım Hizmetlerimiz",
   servicesDescription: "UPS sistemleriniz için kesintisiz, güvenilir ve planlı bakım çözümleri.",
+  catalog: {
+    eyebrow: "Teknik çözümlerimizi keşfedin",
+    title: "Güncel Kataloğumuz",
+    description: "UPS, akü ve enerji sürekliliği çözümlerimizi tek dosyada inceleyin.",
+    file: "assets/images/catalog/sample.pdf"
+  },
   products: [
-    { image: "line-interactive-ups.svg", title: "Line Interactive UPS", description: "Bilgisayar ve POS sistemleri." },
-    { image: "asansor-ups.svg", title: "Asansör UPS", description: "Asansör sistemleri için" },
-    { image: "monofaze-online-ups.svg", title: "Monofaze Online UPS", description: "Ev ve ofis uygulamaları için." },
-    { image: "rack-mount-online-ups.svg", title: "Rack Mount Online UPS", description: "Server ve network sistemleri." },
-    { image: "trifaze-giris-ups.svg", title: "Trifaze Giriş Monofaze Çıkış Online UPS", description: "Ofis ve endüstriyel kullanımlar için" },
-    { image: "trifaze-online-ups.svg", title: "Trifaze Online UPS", description: "Endüstriyel ve veri merkezleri." }
+    { image: "products/line-interactive-ups.svg", title: "Line Interactive UPS", description: "Bilgisayar ve POS sistemleri." },
+    { image: "products/asansor-ups.svg", title: "Asansör UPS", description: "Asansör sistemleri için" },
+    { image: "products/monofaze-online-ups.svg", title: "Monofaze Online UPS", description: "Ev ve ofis uygulamaları için." },
+    { image: "products/rack-mount-ups.svg", title: "Rack Mount Online UPS", description: "Server ve network sistemleri." },
+    { image: "products/trifaze-giris-ups.svg", title: "Trifaze Giriş Monofaze Çıkış Online UPS", description: "Ofis ve endüstriyel kullanımlar için" },
+    { image: "products/trifaze-online-ups.svg", title: "Trifaze Online UPS", description: "Endüstriyel ve veri merkezleri." }
+  ],
+  references: [
+    { image: "references/reference-01.svg", name: "Referans 01" },
+    { image: "references/reference-02.svg", name: "Referans 02" },
+    { image: "references/reference-03.svg", name: "Referans 03" },
+    { image: "references/reference-04.svg", name: "Referans 04" },
+    { image: "references/reference-05.svg", name: "Referans 05" },
+    { image: "references/reference-06.svg", name: "Referans 06" }
   ],
   services: [
     {

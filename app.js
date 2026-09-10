@@ -9,16 +9,47 @@ document.addEventListener("DOMContentLoaded", () => {
  
 
   const renderProducts = () => {
-    const grid = document.querySelector("[data-products]");
-    if (!grid) return;
+    const grids = document.querySelectorAll("[data-products], [data-home-products]");
+    if (!grids.length) return;
     const title = document.querySelector("[data-products-title]");
     if (title) title.textContent = data.productsTitle;
-    grid.innerHTML = data.products.map((product) => `
+    const cards = data.products.map((product) => `
       <article class="card product-card">
         <div class="product-image"><img src="assets/images/${product.image}" alt="${product.title}" loading="lazy"></div>
         <h3>${product.title}</h3><p>${product.description}</p>
         <a class="btn btn-outline" href="iletisim.html">İncele</a>
       </article>`).join("");
+    grids.forEach((grid) => { grid.innerHTML = cards; });
+    const homeGrid = document.querySelector("[data-home-products]");
+    if (homeGrid) {
+      const carousel = homeGrid.closest(".home-products-carousel");
+      const move = (direction) => homeGrid.scrollBy({ left: direction * Math.max(260, homeGrid.clientWidth * .72), behavior: "smooth" });
+      carousel.querySelector("[data-product-prev]").addEventListener("click", () => move(-1));
+      carousel.querySelector("[data-product-next]").addEventListener("click", () => move(1));
+    }
+  };
+
+  const renderReferences = () => {
+    const track = document.querySelector("[data-references-track]");
+    if (!track) return;
+    track.innerHTML = data.references.map((reference) => `
+      <div class="reference-item"><img src="assets/images/${reference.image}" alt="${reference.name}" loading="lazy"></div>
+    `).join("");
+    const carousel = track.closest(".reference-carousel");
+    const previous = carousel.querySelector("[data-reference-prev]");
+    const next = carousel.querySelector("[data-reference-next]");
+    const move = (direction) => track.scrollBy({ left: direction * Math.max(220, track.clientWidth * .72), behavior: "smooth" });
+    previous.addEventListener("click", () => move(-1));
+    next.addEventListener("click", () => move(1));
+  };
+
+  const renderCatalog = () => {
+    const catalog = document.querySelector("[data-catalog]");
+    if (!catalog) return;
+    catalog.querySelector("[data-catalog-eyebrow]").textContent = data.catalog.eyebrow;
+    catalog.querySelector("[data-catalog-title]").textContent = data.catalog.title;
+    catalog.querySelector("[data-catalog-description]").textContent = data.catalog.description;
+    catalog.querySelector("[data-catalog-link]").href = data.catalog.file;
   };
 
   const renderServices = () => {
@@ -57,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     </div><div class="footer-bottom"><div class="container"><span>${data.footer.copyright}</span><span>Tüm hakları saklıdır</span></div></div></footer>`;
   });
   renderProducts();
+  renderReferences();
+  renderCatalog();
   renderServices();
   renderContact();
 

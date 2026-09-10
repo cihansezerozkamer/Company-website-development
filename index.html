@@ -7,24 +7,37 @@
   <link rel="stylesheet" href="tasarım.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/images/logo.png" alt="ist kesintisiz güç"></a>
-      <button class="nav-toggle" aria-label="Menüyü aç">☰</button>
-      <nav class="main-nav">
-        <a href="index.html">AnaSayfa</a>
-        <div class="drop"><button class="drop-toggle">Kurumsal</button><div class="dropdown">
-          <a href="kurumsal.html#mesaj">Kurucunun Mesajı</a><a href="kurumsal.html#hakkimizda">Hakkımızda</a><a href="kurumsal.html#vizyon">Vizyonumuz ve Misyonumuz</a><a href="kurumsal.html#degerler">Değerlerimiz</a><a href="kurumsal.html#surdurulebilirlik">Sürdürülebilirlik</a><a href="kurumsal.html#ik">İnsan Kaynakları Politikamız</a><a href="kurumsal.html#kvkk">KVKK Aydınlatma Metni</a>
-        </div></div>
-        <a href="hizmetler.html">Hizmetler</a><a href="urunler.html">Ürünlerimiz</a><a href="iletisim.html">İletişim</a>
-      </nav>
-    </div>
-  </header>
-  <canvas id="lightning-canvas" aria-hidden="true"></canvas>
+  <div class="home-media-stage">
+    <video class="home-background-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="assets/images/istkızkulesi.mp4" type="video/mp4">
+    </video>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html"><img class="brand-logo" src="assets/images/logo.png" alt="ist kesintisiz güç"></a>
+        <button class="nav-toggle" aria-label="Menüyü aç">☰</button>
+        <nav class="main-nav">
+          <a href="index.html">AnaSayfa</a>
+          <div class="drop"><button class="drop-toggle">Kurumsal</button><div class="dropdown">
+            <a href="kurumsal.html#mesaj">Kurucunun Mesajı</a><a href="kurumsal.html#hakkimizda">Hakkımızda</a><a href="kurumsal.html#vizyon">Vizyonumuz ve Misyonumuz</a><a href="kurumsal.html#degerler">Değerlerimiz</a><a href="kurumsal.html#surdurulebilirlik">Sürdürülebilirlik</a><a href="kurumsal.html#ik">İnsan Kaynakları Politikamız</a><a href="kurumsal.html#kvkk">KVKK Aydınlatma Metni</a>
+          </div></div>
+          <a href="hizmetler.html">Hizmetler</a><a href="urunler.html">Ürünlerimiz</a><a href="iletisim.html">İletişim</a>
+        </nav>
+      </div>
+    </header>
+    <canvas id="lightning-canvas" aria-hidden="true"></canvas>
+    <main>
+      <section class="hero"><div class="hero-inner"><h1>7/24 Teknik Servis</h1><p>Kesintisiz enerji altyapınız için hızlı müdahale, profesyonel destek.</p><a class="btn" href="iletisim.html">Servis Talebi</a></div></section>
+    </main>
+  </div>
   <main>
-    <section class="hero"><div class="hero-inner"><h1>7/24 Teknik Servis</h1><p>Kesintisiz enerji altyapınız için hızlı müdahale, profesyonel destek.</p><a class="btn" href="iletisim.html">Servis Talebi</a></div></section>
+    <section class="catalog-banner container" data-catalog>
+      <div><span class="catalog-eyebrow" data-catalog-eyebrow></span><h2 data-catalog-title></h2><p data-catalog-description></p></div>
+      <a class="btn catalog-button" data-catalog-link href="assets/images/catalog/sample.pdf" download>Kataloğu İndir <span>↓</span></a>
+    </section>
     <section class="container intro"><div><h2>Güvenilir Enerji Çözüm Ortağınız</h2><p>Sürpriz kesintiler içinizi durdurmasın. ist kesintisiz güç olarak, endüstriyel güç kaynaklarından ev tipi çözümlere kadar her ihtiyacınıza uygun profesyonel ve hızlı çözümler sunuyoruz.</p><a class="btn btn-outline" href="hizmetler.html">Çözümlerimizi keşfedin</a></div><div class="visual" aria-label="UPS servis görseli"></div></section>
     <section class="container benefits"><article class="benefit"><div class="benefit-icon">⚡</div><h3>7/24 Acil Destek</h3><p>Enerjiniz kesildiğinde zaman kaybetmeden yanınızdayız.</p></article><article class="benefit"><div class="benefit-icon">⌁</div><h3>Marka Bağımsız Servis</h3><p>Her marka ve model UPS için yetkin servis.</p></article><article class="benefit"><div class="benefit-icon">⌕</div><h3>Ücretsiz Keşif</h3><p>İhtiyacınıza en uygun çözümü yerinde belirliyoruz.</p></article><article class="benefit"><div class="benefit-icon">♢</div><h3>Orijinal Yedek Parça</h3><p>Güvenilir ve uzun ömürlü parça değişimi.</p></article></section>
+    <section class="home-section container"><div class="section-heading"><span>Çözümlerimiz</span><h2>Ürünlerimiz</h2><a href="urunler.html">Tüm ürünleri gör →</a></div><div class="home-products-carousel"><button class="carousel-arrow" type="button" data-product-prev aria-label="Önceki ürün">‹</button><div class="product-grid home-product-grid" data-home-products></div><button class="carousel-arrow" type="button" data-product-next aria-label="Sonraki ürün">›</button></div></section>
+    <section class="home-section references-section"><div class="container"><div class="section-heading"><span>Birlikte güçleniyoruz</span><h2>Referanslarımız</h2></div><div class="reference-carousel"><button class="carousel-arrow" type="button" data-reference-prev aria-label="Önceki referans">‹</button><div class="reference-track" data-references-track></div><button class="carousel-arrow" type="button" data-reference-next aria-label="Sonraki referans">›</button></div></div></section>
   </main>
   <div data-footer></div>
 

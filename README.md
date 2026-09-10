@@ -5,6 +5,8 @@
 Site metinlerini, ürünleri, hizmetleri, iletişim bilgilerini ve harita konumunu `data.js` içinden değiştirin. HTML dosyalarında kart metni veya iletişim bilgisi aramanıza gerek yoktur.
 
 - `siteData.products`: Ürün adı, açıklaması ve görsel dosyası.
+- `siteData.references`: Ana sayfadaki referans carousel logoları.
+- `siteData.catalog`: Ana sayfadaki katalog metinleri ve indirilecek PDF yolu.
 - `siteData.productsTitle`: Ürünler sayfası başlığı.
 - `siteData.services`: Hizmet başlığı, açıklaması, maddeleri ve buton bağlantısı.
 - `siteData.servicesTitle` ve `siteData.servicesDescription`: Hizmetler sayfası başlığı ve üst açıklaması.
@@ -21,6 +23,8 @@ Site metinlerini, ürünleri, hizmetleri, iletişim bilgilerini ve harita konumu
 ```
 
 SVG, PNG, JPG ve WebP dosyaları kullanılabilir. Görseller ürün kartlarında otomatik olarak responsive biçimde gösterilir.
+
+Ana sayfa ürün görselleri `assets/images/products/`, referans logoları `assets/images/references/` klasörlerinden yüklenir.
 
 ## Google Maps
 
