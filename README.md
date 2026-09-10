@@ -1,4 +1,4 @@
-# Prime UPS içerik yönetimi
+# Ürünlü web sitesi içerik yönetimi
 
 ## İçerik kaynağı
 
