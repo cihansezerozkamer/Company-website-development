@@ -3,7 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".main-nav");
   const toggle = document.querySelector(".nav-toggle");
   const drop = document.querySelector(".drop");
-  if (toggle) toggle.addEventListener("click", () => nav.classList.toggle("is-open"));
+  if (toggle) {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
   if (drop) drop.querySelector(".drop-toggle").addEventListener("click", () => drop.classList.toggle("open"));
 
  
