@@ -17,12 +17,31 @@ window.siteData = {
     { image: "products/trifaze-online-ups.svg", title: "Trifaze Online UPS", description: "Endüstriyel ve veri merkezleri." }
   ],
   references: [
-    { image: "references/reference-01.svg", name: "Referans 01" },
-    { image: "references/reference-02.svg", name: "Referans 02" },
-    { image: "references/reference-03.svg", name: "Referans 03" },
-    { image: "references/reference-04.svg", name: "Referans 04" },
-    { image: "references/reference-05.svg", name: "Referans 05" },
-    { image: "references/reference-06.svg", name: "Referans 06" }
+    { image: "references/1.png", name: "Referans 01" },
+    { image: "references/2.png", name: "Referans 02" },
+    { image: "references/3.png", name: "Referans 03" },
+    { image: "references/4.png", name: "Referans 04" },
+    { image: "references/5.png", name: "Referans 05" },
+    { image: "references/6.png", name: "Referans 06" },
+    { image: "references/8.png", name: "Referans 08" },
+    { image: "references/12.png", name: "Referans 12" },
+    { image: "references/13.png", name: "Referans 13" },
+    { image: "references/14.png", name: "Referans 14" },
+    { image: "references/15.png", name: "Referans 15" },
+    { image: "references/16.png", name: "Referans 16" },
+    { image: "references/17.png", name: "Referans 17" },
+    { image: "references/20.png", name: "Referans 20" },
+    { image: "references/22.png", name: "Referans 22" },
+    { image: "references/23.png", name: "Referans 23" },
+    { image: "references/25.png", name: "Referans 25" },
+    { image: "references/26.png", name: "Referans 26" },
+    { image: "references/27.png", name: "Referans 27" },
+    { image: "references/11.jpg", name: "Referans 11" },
+    { image: "references/19.jpg", name: "Referans 19" },
+    { image: "references/21.jpg", name: "Referans 21" },
+    { image: "references/24.jpg", name: "Referans 24" },
+    { image: "references/25.jpg", name: "Referans 25" },
+    { image: "references/26.jpg", name: "Referans 26" },
   ],
   services: [
     {
@@ -59,7 +78,7 @@ window.siteData = {
     phone: "0216 235 10 53 - 0 533 966 68 53",
     email: "info@primeups.com.tr",
     hours: "Hafta içi 09:00 – 18:00",
-    description: "ist kesintisiz güç; kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
+    description: "İST KESİNTİSİZ GÜÇ; kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
   },
   map: {
     embedUrl: "https://www.google.com/maps?q=Yenişehir%20Mh.%20Ankara%20Cd.%20No:5%20Pendik%20İstanbul&output=embed",
