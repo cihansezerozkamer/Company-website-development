@@ -72,20 +72,20 @@ window.siteData = {
       link: "urunler.html"
     }
   ],
-  contact: {
-    address: "Yenişehir Mh. Ankara Cd. No:5",
-    city: "PENDİK / İSTANBUL",
-    phone: "0216 235 10 53 - 0 533 966 68 53",
-    email: "info@primeups.com.tr",
-    hours: "Hafta içi 09:00 – 18:00",
-    description: "İST KESİNTİSİZ GÜÇ; kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
-  },
-  map: {
-    embedUrl: "https://www.google.com/maps?q=Yenişehir%20Mh.%20Ankara%20Cd.%20No:5%20Pendik%20İstanbul&output=embed",
-    label: "Harita alanı — Yenişehir / Pendik, İstanbul"
-  },
+contact: {
+  address: "Kirazlıdere Mah. Fevzi Çakmak Cad. No:11 - A",
+  city: "ÇEKMEKÖY / İSTANBUL",
+  phone: "0542 256 80 03",
+  email: "cigdem@istenerji.com",
+  hours: "Hafta içi 09:00 – 18:00",
+  description: "İST KESİNTİSİZ GÜÇ KAYNAKLARI VE ENERJİ SİSTEMLERİ SAN. TİC. LTD. ŞTİ.; kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
+},
+map: {
+  embedUrl: "https://www.google.com/maps?q=Fevzi%20Çakmak%20Cd%20No%3A11%2C%20Kirazlıdere%2C%2034788%20Çekmeköy%2Fİstanbul&output=embed",
+  label: "Harita alanı — Kirazlıdere / Çekmeköy, İstanbul"
+},
   footer: {
     description: "UPS sistemleri ve bakım hizmetlerinde kurumsal ve güvenilir çözümler.",
-    copyright: "© 2025 ist kesintisiz güç"
+    copyright: "© 2026 İST Kesintisiz Güç Kaynakları ve Enerji Sistemleri San. Tic. Ltd. Şti."
   }
 };
