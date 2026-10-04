@@ -1,5 +1,19 @@
 GOOGLE İŞLETME PROFİLİ VE SEARCH CONSOLE — İLERLEME NOTU
 Başlangıç: 4 Ekim 2026
+SON KONTROL: 4 Ekim 2026 — aşağıdaki güncel durum önceki ilerleme notlarının yerine geçer.
+- Ana sayfa Search Console'da artık "URL Google'da mevcut" ve "Sayfa dizine eklendi".
+  Önceki "tarama bekleniyor" kayıtları geçmiş durumdur. Tekrar dizine ekleme isteği gönderilmedi.
+- İşletme profili kullanıcı tarafından oluşturulmuş: İST KESİNTİSİZ GÜÇ KAYNAKLARI.
+  Adres, telefon ve web sitesi kayıtlı. Profilde "HERKESE GÖRÜNÜR DEĞİL" ve
+  "Müşteriler işletme bilgilerinizi göremiyor ... işletmenizi doğrulayın" yazıyor.
+- Doğrulama akışında eski İst Enerji kaydı önerildi; kullanıcı daha önce ayrı işletme
+  olduğunu söylediği için "Bu eşleşmiyor" seçilip onaylandı. Eski kayıt değiştirilmedi.
+- Sunulan doğrulama yöntemi: İşletme Videosu Gönderin. Konum, ekipman ve
+  işletmeyi yönetme kanıtı isteniyor. Kullanıcının iş yerinde telefonla tamamlaması gerekir.
+  Video yüklenmedi, kamera izni verilmedi. Ekran kullanıcıya açık bırakıldı.
+- Ana sayfanın başlığı halen "ist kesintisiz güç | Kesintisiz Enerji Çözümleri";
+  meta description henüz eklenmemiş. Bu kontrolde web sitesi kodu değiştirilmedi.
+
 Domain: istkesintisizgüç.com
 Teknik domain: xn--istkesintisizg-tjb94a.com
 Site: https://xn--istkesintisizg-tjb94a.com/
