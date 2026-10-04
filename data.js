@@ -54,12 +54,12 @@ window.siteData = {
     }
   ],
 contact: {
-  address: "Kirazlıdere Mah. Fevzi Çakmak Cad. No:11 - A",
+  address: "Kirazlıdere Mah. Fevzi Çakmak Cad. No: 11 - A",
   city: "ÇEKMEKÖY / İSTANBUL",
   phone: "0542 256 80 03",
   email: "cigdem@istenerji.com",
   hours: "Hafta içi 09:00 – 18:00",
-  description: "İST KESİNTİSİZ GÜÇ KAYNAKLARI VE ENERJİ SİSTEMLERİ SAN. TİC. LTD. ŞTİ.; kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
+  description: "İST KESİNTİSİZ GÜÇ KAYNAKLARI VE ENERJİ SİSTEMLERİ SAN. TİC. LTD. ŞTİ. kesintisiz güç kaynakları, regülatörler ve endüstriyel akü sistemlerinde satış, bakım ve onarım çözümleri sunan güvenilir iş ortağınızdır."
 },
 map: {
   embedUrl: "https://www.google.com/maps?q=Fevzi%20Çakmak%20Cd%20No%3A11%2C%20Kirazlıdere%2C%2034788%20Çekmeköy%2Fİstanbul&output=embed",
@@ -73,7 +73,7 @@ map: {
 
 Object.assign(window.siteData, {
   homeSlides: [
-    { src: "anasayfa/anasayfa1.png", type: "image", alt: "Anasayfa 1" }, { src: "anasayfa/anasayfa2.jpeg", type: "image", alt: "Anasayfa 2" }, { src: "anasayfa/anasayfa3.mp4", type: "video", alt: "Anasayfa 3" }, { src: "anasayfa/anasayfa4.mp4", type: "video", alt: "Anasayfa 4" }, { src: "anasayfa/anasayfa5.jpeg", type: "image", alt: "Anasayfa 5" }, { src: "anasayfa/anasayfa6.mp4", type: "video", alt: "Anasayfa 6" }
+    { src: "anasayfa/anasayfa1.png", type: "image", alt: "Ana Sayfa 1" }, { src: "anasayfa/anasayfa2.jpeg", type: "image", alt: "Ana Sayfa 2" }, { src: "anasayfa/anasayfa3.mp4", type: "video", alt: "Ana Sayfa 3" }, { src: "anasayfa/anasayfa4.mp4", type: "video", alt: "Ana Sayfa 4" }, { src: "anasayfa/anasayfa5.jpeg", type: "image", alt: "Ana Sayfa 5" }, { src: "anasayfa/anasayfa6.mp4", type: "video", alt: "Ana Sayfa 6" }
   ],
   products: [
     { id: "line-interactive-ups", image: "products/thumbnails/line-interactive-ups-red.png", title: "Line Interactive UPS", description: "Bilgisayar ve POS sistemleri için UPS.", document: "products/LİNE İNT. UPS.docx", documentImages: { "media/image2.png": "products/line-int.jpeg" } },

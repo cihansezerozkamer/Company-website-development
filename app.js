@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-footer]").forEach((slot) => {
     slot.outerHTML = `<footer class="footer"><div class="container footer-main">
       <div><a class="brand" href="index.html"><img class="brand-logo" src="assets/images/logo.png" alt="ist kesintisiz güç"></a><p style="margin-top:20px">${data.footer.description}</p></div>
-      <div><h3>Kurumsal</h3><a href="index.html">Anasayfa</a><a href="kurumsal.html">Kurumsal</a><a href="urunler.html">Ürünler</a><a href="hizmetler.html">Servis &amp; Bakım</a><a href="referanslar.html">Referanslar</a><a href="iletisim.html">İletişim</a></div>
+      <div><h3>Kurumsal</h3><a href="index.html">Ana Sayfa</a><a href="kurumsal.html">Kurumsal</a><a href="urunler.html">Ürünler</a><a href="hizmetler.html">Servis &amp; Bakım</a><a href="referanslar.html">Referanslar</a><a href="iletisim.html">İletişim</a></div>
       <div><h3>Hizmetler</h3><a href="urunler.html">UPS Satışı</a><a href="hizmetler.html">Standart Bakım</a><a href="hizmetler.html">Premium Bakım</a><a href="hizmetler.html">Teknik Servis</a></div>
       <div><h3>İletişim</h3><p>⌖ <span data-contact-address></span></p><p>⌕ <span data-contact-phone></span></p><p>✉ <span data-contact-email></span></p></div>
     </div><div class="footer-bottom"><div class="container"><span>${data.footer.copyright}</span><span>Tüm hakları saklıdır</span></div></div></footer>`;
