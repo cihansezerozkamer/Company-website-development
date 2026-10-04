@@ -153,8 +153,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("[data-document-title]").textContent = product.title;
     document.querySelector("[data-document-description]").textContent = product.description;
     const download = document.querySelector("[data-document-download]");
-    if (!product.document) { download.hidden = true; content.innerHTML = `<p>Bu ürün için teknik doküman yakında eklenecektir.</p>`; return; }
+    document.title = `${product.title} | ist kesintisiz güç`;
+    if (!product.document) {
+      download.hidden = true;
+      content.innerHTML = `<figure class="document-figure"><img src="assets/images/${product.image}" alt="${product.title}"></figure><p>Bu ürün için teknik doküman yakında eklenecektir.</p>`;
+      return;
+    }
     download.href = `assets/images/${product.document}`;
+    const isPdf = /\.pdf$/i.test(product.document);
+    download.textContent = isPdf ? "PDF indir" : "DOCX indir";
+    if (isPdf) {
+      content.classList.add("document-content--pdf");
+      content.innerHTML = `<div class="document-pdf-pages">${(product.documentPages || []).map((page, index) =>
+        `<a class="document-pdf-page" href="${download.href}#page=${index + 1}" target="_blank" rel="noopener" aria-label="${product.title} PDF dokümanı, sayfa ${index + 1}; PDF aç"><img src="assets/images/${page}" alt="${product.title} teknik dokümanı — sayfa ${index + 1}" loading="${index ? "lazy" : "eager"}"></a>`).join("")}</div><p class="document-pdf-link"><a href="${download.href}" target="_blank" rel="noopener">PDF dokümanını aç ↗</a></p>`;
+      return;
+    }
     try {
       const response = await fetch(download.href);
       if (!response.ok) throw new Error("Doküman yüklenemedi.");
@@ -187,11 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
           for (const drawing of node.getElementsByTagName("w:drawing")) { const figure = await documentImage(drawing); if (figure) blocks.push(figure); }
           const text = [...node.getElementsByTagName("w:t")].map((part) => part.textContent).join("").trim();
           if (!text) continue;
-          const paragraph = document.createElement("p"); paragraph.textContent = text;
+          const paragraph = document.createElement("p"); paragraph.textContent = text.replace(/\b[oO]\s*[nN]\s*[- ]?\s*[lL][iİıI][nN][eE]\b/g, "On-Line");
           const style = node.getElementsByTagName("w:pStyle")[0]?.getAttribute("w:val") || ""; if (/heading/i.test(style)) paragraph.className = "document-heading";
           blocks.push(paragraph);
         }
-        if (node.localName === "tbl") { const table = document.createElement("table"); [...node.getElementsByTagName("w:tr")].forEach((row) => { const tr = document.createElement("tr"); [...row.getElementsByTagName("w:tc")].forEach((cell) => { const td = document.createElement("td"); td.textContent = [...cell.getElementsByTagName("w:t")].map((part) => part.textContent).join(" ").trim(); tr.append(td); }); table.append(tr); }); blocks.push(table); }
+        if (node.localName === "tbl") { const table = document.createElement("table"); [...node.getElementsByTagName("w:tr")].forEach((row) => { const tr = document.createElement("tr"); [...row.getElementsByTagName("w:tc")].forEach((cell) => { const td = document.createElement("td"); td.textContent = [...cell.getElementsByTagName("w:t")].map((part) => part.textContent).join(" ").trim().replace(/\b[oO]\s*[nN]\s*[- ]?\s*[lL][iİıI][nN][eE]\b/g, "On-Line"); tr.append(td); }); table.append(tr); }); blocks.push(table); }
       }
       content.replaceChildren(...blocks);
     } catch (error) { content.innerHTML = `<p>Doküman tarayıcıda görüntülenemedi. <a href="${download.href}" download>DOCX dosyasını indirin</a>.</p>`; }
