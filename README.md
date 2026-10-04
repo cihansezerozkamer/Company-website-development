@@ -29,7 +29,6 @@ Ana sayfa ürün görselleri `assets/images/products/`, referans logoları `asse
 Kart sırası, `siteData.products` dizisinin sırasıdır; ana sayfa ve ürünler sayfası aynı diziyi kullanır.
 Mevcut kart fotoğrafları `products/thumbnails/` klasöründedir. Line Interactive fotoğrafı
 `LİNE İNT-MYTEC-1.png` dosyasından, diğer fotoğraflar ilgili DOCX/PDF dokümanlarından alınır.
-Son üç genel ürün grubu, aynı faz yapısındaki ürünün fotoğrafını kullanır.
 
 ## Ürün dokümanları
 
