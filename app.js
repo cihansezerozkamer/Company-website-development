@@ -185,10 +185,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const type = imageType(file);
         if (!type) return null;
         const image = document.createElement("img");
-        image.src = URL.createObjectURL(new Blob([await unzipDocxEntry(archive, file)], { type }));
+        const replacement = product.documentImages?.[target];
+        image.src = replacement ? `assets/images/${replacement}` : URL.createObjectURL(new Blob([await unzipDocxEntry(archive, file)], { type }));
         image.alt = product.title;
         const extent = drawing.getElementsByTagName("wp:extent")[0];
-        if (extent) image.style.aspectRatio = `${extent.getAttribute("cx")} / ${extent.getAttribute("cy")}`;
+        if (extent && !replacement) image.style.aspectRatio = `${extent.getAttribute("cx")} / ${extent.getAttribute("cy")}`;
         const figure = document.createElement("figure");
         figure.className = "document-figure";
         figure.append(image);

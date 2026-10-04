@@ -41,7 +41,7 @@ def thumbnail(data, target):
 def build():
     THUMBNAILS.mkdir(parents=True, exist_ok=True)
     PREVIEWS.mkdir(parents=True, exist_ok=True)
-    thumbnail((ROOT / 'LİNE İNT-MYTEC-1.png').read_bytes(), THUMBNAILS / 'line-interactive-ups.png')
+    thumbnail((ROOT / 'line-int.jpeg').read_bytes(), THUMBNAILS / 'line-interactive-ups.png')
     sources = [
         ('ASANSO*UPS.docx', 'word/media/image2.png', 'asansor-ups'),
         ('RACK-TOWER 1-2-3 KVA..docx', 'word/media/image2.png', 'rack-mount-1-2-3-kva'),

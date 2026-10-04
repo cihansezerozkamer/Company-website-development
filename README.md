@@ -28,7 +28,16 @@ Ana sayfa ürün görselleri `assets/images/products/`, referans logoları `asse
 
 Kart sırası, `siteData.products` dizisinin sırasıdır; ana sayfa ve ürünler sayfası aynı diziyi kullanır.
 Mevcut kart fotoğrafları `products/thumbnails/` klasöründedir. Line Interactive fotoğrafı
-`LİNE İNT-MYTEC-1.png` dosyasından, diğer fotoğraflar ilgili DOCX/PDF dokümanlarından alınır.
+`line-int.jpeg` dosyasından, diğer fotoğraflar ilgili DOCX/PDF dokümanlarından alınır.
+Line Interactive detay sayfasındaki ana ürün fotoğrafı da `documentImages` alanıyla
+bu JPEG dosyasından gösterilir.
+
+Line Interactive, Asansör, Rack Mount, Rack Tower ve 6–10 KVA kartları,
+mevcut üç KVA görselinin kırmızı neon tonuna uyarlanmış `*-red.png` görsellerini
+kullanır. Bu 640 × 405 piksel görseller ImageGen ile hazırlanmıştır;
+üretim komutları `scripts/product-image-prompts.json` içindedir.
+`build-product-images.py` kaynak thumbnail'leri yeniden üretir; kırmızı arka planlı
+kart görsellerini değiştirmez.
 
 ## Ürün dokümanları
 
