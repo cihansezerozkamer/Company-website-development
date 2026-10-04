@@ -1,0 +1,88 @@
+İST KESİNTİSİZ GÜÇ — DOMAIN BAĞLANTI NOTLARI
+Tarih: 4 Ekim 2026
+SİTE USERNAME : cihansiteci
+DOMAIN VE SİTENİN BULUNDUĞU YER
+
+Satın alınan domain: istkesintisizgüç.com
+Domain sağlayıcısı ve DNS yönetimi: Spaceship
+Web sitesinin yayınlandığı hizmet: GitHub Pages
+GitHub deposu: cihansezerozkamer/Company-website-development
+Sitenin adresi: https://istkesintisizgüç.com/
+
+Spaceship domainin kayıt ve DNS işlemlerini yönetiyor. Sitenin HTML,
+JavaScript, görsel ve diğer dosyalarını ise GitHub Pages yayınlıyor.
+DNS, ziyaretçinin yazdığı domainin hangi sunucuya ulaşacağını bildiriyor.
+
+Domainin teknik yazımı: xn--istkesintisizg-tjb94a.com
+Bu, ü ve ç harflerini içeren aynı domainin Punycode karşılığıdır.
+İkinci bir domain değildir.
+
+EKLENEN DNS KAYITLARI
+
+Tür      Host       Değer                         TTL
+A        @          185.199.108.153                30 dakika
+A        @          185.199.109.153                30 dakika
+A        @          185.199.110.153                30 dakika
+A        @          185.199.111.153                30 dakika
+CNAME    www        cihansezerozkamer.github.io    30 dakika
+
+@, başında www bulunmayan ana domaini ifade eder: istkesintisizgüç.com.
+A kaydı, bir ismi IPv4 adresine bağlar. Yukarıdaki dört IP, GitHub Pages'in
+özel domainler için resmi olarak yayımladığı adreslerdir. Dört kaydı,
+GitHub'un tarif ettiği adres kümesinin tamamını kullanmak için ekledik.
+Hepsi aynı siteye hizmet veren GitHub Pages altyapısına yönelir.
+Bunlar dört ayrı web sitesi veya dört ayrı hosting satın alımı değildir.
+
+CNAME kaydı, www.istkesintisizgüç.com adını GitHub hesabının Pages adresine
+bağlayan bir takma addır. Hedefin sonunda /Company-website-development/
+yazılmaz; DNS kaydı yalnızca alan adı içerir. Hangi deponun gösterileceğini
+GitHub Pages'te kaydettiğimiz özel domain ayarı belirler.
+
+TTL 30 dakika, DNS cevaplarının önbellekte tutulma süresidir.
+Tüm dünyada değişikliğin tam olarak 30 dakikada yayılacağı garantisi değildir.
+
+YAPILAN İŞLEMLER
+
+1. Açık Spaceship hesabında satın alınan domain kontrol edildi.
+2. Sitenin GitHub Pages üzerinden, main dalının kök klasöründen
+   yayınlandığı doğrulandı.
+3. Deponun Settings > Pages > Custom domain alanına
+   xn--istkesintisizg-tjb94a.com yazılıp kaydedildi.
+4. GitHub, deponun kökünde CNAME dosyasını oluşturdu.
+   Bu dosyanın içeriği: xn--istkesintisizg-tjb94a.com
+5. Spaceship Advanced DNS ekranında yukarıdaki dört A kaydı ve
+   www için bir CNAME kaydı eklendi. Nameserver'lar Spaceship'te kaldı:
+   launch1.spaceship.net ve launch2.spaceship.net.
+6. Spaceship çoklu A kaydı uyarısı gösterdi. Otomatik onay denetimi
+   işlemi durdurunca kullanıcıdan somut onay istendi. Kullanıcı
+   "onaylıyorum" dedikten sonra kalan farklı GitHub IP kayıtları kaydedildi.
+7. GitHub'un oluşturduğu CNAME commit'i yerel depoya alındı.
+8. Ana domainin tarayıcıda siteyi açtığı doğrulandı.
+9. Ana domainin HTTPS sertifikası kullanılabilir duruma geldiğinde
+   Enforce HTTPS seçeneği açıldı. HTTPS bağlantısı tarayıcıda doğrulandı.
+10. Önceki yazım düzeltmeleri commit edilip GitHub'a gönderildi.
+    GitHub Pages yayını başarıyla tamamlandı. Yeni domain üzerinde
+    "Sürpriz kesintiler işinizi durdurmasın." ve "Ana Sayfa" yazımları
+    kontrol edildi.
+
+İlgili commit'ler:
+02e0161 — Create CNAME
+fbef206 — Fix Turkish site copy and navigation spelling
+
+KURULUM SONUNDAKİ KONTROL SONUCU
+
+https://istkesintisizgüç.com/ açılıyor; HTTPS zorunluluğu aktif.
+www için CNAME kaydı kaydedildi, fakat son kontrolde GitHub www adresinin
+DNS doğrulamasını tamamlamamıştı. www adresinde HTTPS sertifikası uyuşmazlığı
+görüldü. Bu nedenle www bağlantısının çalıştığı teyit edilmedi.
+Tarayıcının sertifika uyarısı aşılmadı.
+
+Bu durum için tekrar bakılacak yer:
+https://github.com/cihansezerozkamer/Company-website-development/settings/pages
+Custom domain bölümündeki Check again düğmesi DNS kontrolünü yeniler.
+GitHub belgelerine göre DNS değişikliklerinin yayılması 24 saate kadar sürebilir.
+
+RESMİ KAYNAK
+
+GitHub Pages özel domain ve DNS yönergesi:
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site

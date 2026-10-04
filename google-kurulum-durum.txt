@@ -1,0 +1,67 @@
+GOOGLE İŞLETME PROFİLİ VE SEARCH CONSOLE — İLERLEME NOTU
+Başlangıç: 4 Ekim 2026
+Domain: istkesintisizgüç.com
+Teknik domain: xn--istkesintisizg-tjb94a.com
+Site: https://xn--istkesintisizg-tjb94a.com/
+
+Kullanıcı iki kurulumu da yapmamızı istedi. Kota nedeniyle durulursa
+tamamlanan adımlar ve devam edilecek yer bu dosyada tutulacak.
+
+MEVCUT DURUM
+- Google hesabı açık; mevcut hesapla Search Console kurulumuna başlandı.
+- Çiçek Sünger ayrı bir işletmedir; kullanıcı bunu doğruladı. Bu profil değiştirilmeyecek.
+- Hizmet alanı tüm İstanbul; kullanıcı doğruladı.
+- Kullanıcı doğruladı: müşteriler iş yerine gelebiliyor; tüm İstanbul'da yerinde hizmet de var.
+- Search Console domain mülkünün sahipliği Google tarafından doğrulandı.
+- Google TXT değeri: google-site-verification=5cI03fekIwy5vFdUYtZ1S9uio3xIh8DUnDCz4OM4juo
+- Google Search Console domain mülkü: sc-domain:xn--istkesintisizg-tjb94a.com
+- Google doğrulama TXT kaydı Spaceship'te @ hostuna, 30 dakika TTL ile girildi.
+- TXT kaydının kalıcı olarak kaydedildiği Spaceship ekranında doğrulandı.
+- Search Console ekranında "Sahiplik doğrulandı" görüldü.
+- Aynı adreste "İst Enerji Kesintisiz Güç Kaynağı, Regülatör" kaydı bulundu.
+  7 yorumlu, kalıcı olarak kapalı. Kullanıcı bunun ayrı bir işletme olduğunu doğruladı.
+  Eski kayıt değiştirilmeyecek. Yeni İST profili oluşturma ekranı açıldı;
+  henüz profil gönderilmedi. Adı: İST Kesintisiz Güç.
+  Seçilen kategori: Elektrik Malzemeleri Satıcısı.
+  "İleri" Google İşletme Profili Hizmet Şartlarını kabul ediyor;
+  bu düğmeye basmadan önce kullanıcıdan açık onay istendi, yanıt bekleniyor.
+
+YAPILACAKLAR
+1. Şartlar için açık onay geldikten sonra yeni işletme profili akışına devam et.
+2. Doğru işletme bilgilerini gir ve uygun doğrulama yöntemine ilerle.
+3. Search Console sahipliği tamamlandı; DNS TXT kaydı kalıcı tutulmalı.
+4. sitemap.xml ve robots.txt GitHub'a gönderildi: commit 9a5a911.
+   sitemap.xml 14 URL içeriyor; canlı HTTP 200 ve geçerli XML doğrulandı.
+5. Site haritası Search Console'a gönderildi; "Site haritası başarıyla gönderildi" görüldü.
+   İlk okuma hatasından sonra Google canlı testi başarılı oldu ve harita yeniden gönderildi.
+   SON DURUM: Başarılı. Google 14 sayfa keşfetti; son okuma 4 Ekim 2026.
+6. Ana sayfa dizine ekleme isteği tamamlandı; Google "Dizine eklenmesi istendi"
+   ve "URL, öncelikli bir tarama sırasına eklendi" onaylarını gösterdi.
+   Henüz dizine eklenmiş olduğu anlamına gelmez; tarama bekleniyor.
+7. robots.txt ve sitemap.xml dış ağdan HTTP 200 ile erişiliyor.
+   sitemap.xml Content-Type: application/xml; Googlebot user-agent ile de HTTP 200.
+8. sitemap.xml için Google CANLI TEST tamamlandı (4 Ekim 2026, 22:50).
+   URL Google tarafından kullanılabilir; taramaya izin: Evet; sayfa getirme: Başarılı.
+   Başarılı canlı testin ardından yeniden gönderim tamamlandı; okuma hatası çözüldü.
+
+KALDIĞIMIZ YER / SONRAKİ ADIM
+- Search Console tarafı tamamlandı. Yeni site henüz dizine eklenmiş görünmüyor;
+  ana sayfa için alınmış tarama isteğinin işlenmesi bekleniyor. Aynı URL'yi tekrar isteme.
+- Google İşletme Profili sekmesi yeni profil adı/kategori ekranında açık.
+  https://business.google.com/create
+  Ad: İST Kesintisiz Güç; kategori: Elektrik Malzemeleri Satıcısı.
+- Kullanıcının Google İşletme Profili Hizmet Şartlarını kabul eden İleri düğmesi
+  için açık onayı bekleniyor. Onay gelince adres + tüm İstanbul hizmet alanı,
+  site + telefon bilgilerini girip Google'ın sunduğu doğrulama yöntemine devam et.
+- Profil henüz oluşturulmadı veya doğrulanmadı. Çiçek Sünger ve eski kapalı
+  İst Enerji kayıtları değiştirilmedi.
+
+İşletme telefonu: 0542 256 80 03
+İşletme adresi: Kirazlıdere Mah. Fevzi Çakmak Cad. No: 11-A,
+Çekmeköy / İstanbul
+
+GÜVENLİ DEVAM
+- Şifre, tek kullanımlık giriş kodu ve oturum bilgilerini bu dosyaya yazma.
+- Bir işlemin sonucu belirsizse tekrar göndermeden önce ekrandaki durumu kontrol et.
+- İşletme video/telefon doğrulaması kullanıcının katılımını gerektirebilir.
+- Açık ve tamamlanmamış kurulum sekmeleri kullanıcıya bırakılacak.
