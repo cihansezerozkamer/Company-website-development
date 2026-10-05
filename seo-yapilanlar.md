@@ -46,6 +46,11 @@ Bu çalışma kaydı, tüm yeni sayfaların şimdiden Google dizininde olduğu a
 Önceki kayıtta Google İşletme Profili oluşturulmuş, ancak video doğrulaması bekliyor.
 İş yerinin konumu, ekipmanları ve işletmeyi yönetme yetkisini gösteren videonun iş
 yerinde telefonla tamamlanması gerekiyor. SEO kodu bu doğrulamanın yerine geçmez.
+5 Ekim'de profilin canlı durumunu kontrol etmek için hesabı açma girişimi otomatik
+onay denetimince engellendi: ayrı özel hesap içeriğine erişim için bu görevde açık
+yetki bulunmadığı belirtildi. Kullanıcıdan yalnızca bu kontrol için ayrı onay istendi.
+Dolayısıyla profil durumu bu oturumda yeniden doğrulanmadı; yukarıdaki bilgi 4 Ekim
+kurulum kaydına dayanır. Site yayını bu kısıttan etkilenmedi.
 
 Belirli bir sorguda görünme, sıra veya süre garantisi yoktur. Değişiklikler yayına
 alındıktan sonra Search Console performans raporunda İstanbul ve Çekmeköy sorguları,
@@ -57,5 +62,11 @@ Google resmi kaynakları:
 
 ## Yayın
 
-Yerel kontroller tamamlandı. GitHub Pages yayını ve canlı domain doğrulaması
-tamamlandığında sonuç bu bölüme kaydedilecektir.
+- SEO commit'i: `b4641f5b176be904c3abc492602cdf3fdb38397f`, `main` dalına gönderildi.
+- GitHub Pages yayını başarıyla tamamlandı:
+  https://github.com/cihansezerozkamer/Company-website-development/actions/runs/37276955591
+- Canlı domain üzerinde 15 sayfanın tamamı HTTP 200 ile açıldı. Canlı title,
+  description, H1, canonical ve JSON-LD yerel dosyalarla birebir eşleşti.
+- Canlı `sitemap.xml` ve `robots.txt` yerel sürümlerle eşleşti.
+- Site: https://xn--istkesintisizg-tjb94a.com/
+- Çekmeköy sayfası: https://xn--istkesintisizg-tjb94a.com/cekmekoy-ups.html
