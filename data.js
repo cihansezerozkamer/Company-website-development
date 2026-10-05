@@ -1,7 +1,7 @@
 window.siteData = {
-  productsTitle: "Ürün Gruplarımız",
-  servicesTitle: "Servis & Bakım Hizmetlerimiz",
-  servicesDescription: "UPS sistemleriniz için kesintisiz, güvenilir ve planlı bakım çözümleri.",
+  productsTitle: "UPS ve Kesintisiz Güç Kaynakları",
+  servicesTitle: "İstanbul UPS Servisi, Bakım ve Kurulum",
+  servicesDescription: "Çekmeköy merkezimizden İstanbul genelinde UPS teknik servis, kesintisiz güç kaynağı bakımı, satış ve kurulum desteği sunuyoruz.",
   references: [
     { image: "references/2.png", name: "Referans 02" },
     { image: "references/3.png", name: "Referans 03" },
@@ -66,7 +66,7 @@ map: {
   label: "Harita alanı — Kirazlıdere / Çekmeköy, İstanbul"
 },
   footer: {
-    description: "UPS sistemleri ve bakım hizmetlerinde kurumsal ve güvenilir çözümler.",
+    description: "Çekmeköy merkezli İST Kesintisiz Güç: İstanbul genelinde UPS satışı, kesintisiz güç kaynağı kurulumu, teknik servis ve bakım hizmetleri.",
     copyright: "© 2026 İST Kesintisiz Güç Kaynakları ve Enerji Sistemleri San. Tic. Ltd. Şti."
   }
 };
@@ -88,4 +88,14 @@ Object.assign(window.siteData, {
   references: [
     { image: "references/main1.png", name: "Harp Akademileri" }, { image: "references/main2.jpg", name: "Bayraktar" }, { image: "references/main3.png", name: "Polat", theme: "dark" }, { image: "references/main4.png", name: "UNO" }, { image: "references/2.png", name: "Referans 02" }, { image: "references/3.png", name: "Referans 03" }, { image: "references/5.png", name: "Referans 05" }, { image: "references/8.png", name: "Referans 08" }, { image: "references/12.png", name: "Referans 12" }, { image: "references/13.png", name: "Referans 13" }, { image: "references/14.png", name: "Referans 14" }, { image: "references/15.png", name: "Referans 15" }, { image: "references/16.png", name: "Referans 16" }, { image: "references/17.png", name: "Referans 17" }, { image: "references/20.png", name: "Referans 20" }, { image: "references/22.png", name: "Referans 22" }, { image: "references/23.png", name: "Referans 23" }, { image: "references/26.png", name: "Referans 26" }, { image: "references/27.png", name: "Referans 27" }, { image: "references/19.jpg", name: "Referans 19" }, { image: "references/21.jpg", name: "Referans 21" }, { image: "references/24.jpg", name: "Referans 24" }, { image: "references/26.jpg", name: "Referans 26" }, { image: "references/central hospital.jpg", name: "Central Hospital" }, { image: "references/delta.webp", name: "Delta" }, { image: "references/doku-logo-7.png.webp", name: "Doku" }, { image: "references/doğruer.png", name: "Doğruer" }, { image: "references/eskişehir.jpg", name: "Eskişehir" }, { image: "references/kendal.jpg", name: "Kendal" }, { image: "references/megapolnewlogo.png.webp", name: "Megapol" }, { image: "references/mediplus-logo.png", name: "Mediplus" }, { image: "references/MİMAR-SİNAN-GÜZEL-SANATLAR-ÜNİVERSİTESİ-logo1.jpg", name: "Mimar Sinan Güzel Sanatlar Üniversitesi" }, { image: "references/ota-logo.png", name: "OTA" }, { image: "references/pendik veteriner.jpg", name: "Pendik Veteriner" }, { image: "references/sertrans.png", name: "Sertrans" }, { image: "references/Tarım Müdürlüğü.png", name: "Tarım Müdürlüğü" }, { image: "references/yurtbay.svg", name: "Yurtbay" }
   ]
+});
+
+// Hem statik SEO üretimi hem tarayıcı aynı adresleri ve işletme bilgilerini kullanır.
+window.siteData.seo = {
+  origin: "https://xn--istkesintisizg-tjb94a.com",
+  name: "İST Kesintisiz Güç",
+  legalName: "İST KESİNTİSİZ GÜÇ KAYNAKLARI VE ENERJİ SİSTEMLERİ SAN. TİC. LTD. ŞTİ."
+};
+window.siteData.products.forEach((product) => {
+  product.url = `ups-${product.id}.html`;
 });

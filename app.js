@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (title) title.textContent = data.productsTitle;
     const cards = data.products.map((product) => `
       <article class="card product-card">
-        <div class="product-image"><img src="assets/images/${product.image}" alt="${product.title}" loading="lazy"></div>
+        <div class="product-image"><img src="assets/images/${product.image}" alt="${product.title}" width="640" height="405" loading="lazy"></div>
         <h3>${product.title}</h3><p>${product.description}</p>
-        <a class="btn btn-outline" href="urun-detay.html?urun=${encodeURIComponent(product.id)}">İncele</a>
+        <a class="btn btn-outline" href="${product.url}" aria-label="${product.title} ürününü incele">İncele</a>
       </article>`).join("");
     grids.forEach((grid) => { grid.innerHTML = cards; });
     const homeGrid = document.querySelector("[data-home-products]");
@@ -148,12 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderDocument = async () => {
     const content = document.querySelector("[data-document-content]");
     if (!content) return;
-    const product = data.products.find((item) => item.id === new URLSearchParams(location.search).get("urun"));
+    const productId = document.body.dataset.productId || new URLSearchParams(location.search).get("urun");
+    const product = data.products.find((item) => item.id === productId);
     if (!product) { content.textContent = "Ürün bulunamadı."; return; }
+    if (!document.body.dataset.productId) { location.replace(product.url); return; }
     document.querySelector("[data-document-title]").textContent = product.title;
     document.querySelector("[data-document-description]").textContent = product.description;
     const download = document.querySelector("[data-document-download]");
-    document.title = `${product.title} | ist kesintisiz güç`;
     if (!product.document) {
       download.hidden = true;
       content.innerHTML = `<figure class="document-figure"><img src="assets/images/${product.image}" alt="${product.title}"></figure><p>Bu ürün için teknik doküman yakında eklenecektir.</p>`;
@@ -229,8 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderContact = () => {
     const contact = data.contact;
     document.querySelectorAll("[data-contact-address]").forEach((el) => { el.innerHTML = `${contact.address}<br>${contact.city}`; });
-    document.querySelectorAll("[data-contact-phone]").forEach((el) => { el.textContent = contact.phone; });
-    document.querySelectorAll("[data-contact-email]").forEach((el) => { el.textContent = contact.email; });
+    document.querySelectorAll("[data-contact-phone]").forEach((el) => { el.innerHTML = `<a href="tel:+90${contact.phone.replace(/\D/g, '').replace(/^0/, '')}">${contact.phone}</a>`; });
+    document.querySelectorAll("[data-contact-email]").forEach((el) => { el.innerHTML = `<a href="mailto:${contact.email}">${contact.email}</a>`; });
     document.querySelectorAll("[data-contact-hours]").forEach((el) => { el.textContent = contact.hours; });
     const description = document.querySelector("[data-contact-description]");
     if (description) description.textContent = contact.description;
@@ -242,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slot.outerHTML = `<footer class="footer"><div class="container footer-main">
       <div><a class="brand" href="index.html"><img class="brand-logo" src="assets/images/logo.png" alt="ist kesintisiz güç"></a><p style="margin-top:20px">${data.footer.description}</p></div>
       <div><h3>Kurumsal</h3><a href="index.html">Ana Sayfa</a><a href="kurumsal.html">Kurumsal</a><a href="urunler.html">Ürünler</a><a href="hizmetler.html">Servis &amp; Bakım</a><a href="referanslar.html">Referanslar</a><a href="iletisim.html">İletişim</a></div>
-      <div><h3>Hizmetler</h3><a href="urunler.html">UPS Satışı</a><a href="hizmetler.html">Standart Bakım</a><a href="hizmetler.html">Premium Bakım</a><a href="hizmetler.html">Teknik Servis</a></div>
+      <div><h3>Hizmetler</h3><a href="urunler.html">UPS Satışı</a><a href="hizmetler.html">Standart Bakım</a><a href="hizmetler.html">Premium Bakım</a><a href="hizmetler.html">Teknik Servis</a><a href="cekmekoy-ups.html">Çekmeköy UPS Satış ve Servis</a></div>
       <div><h3>İletişim</h3><p>⌖ <span data-contact-address></span></p><p>⌕ <span data-contact-phone></span></p><p>✉ <span data-contact-email></span></p></div>
     </div><div class="footer-bottom"><div class="container"><span>${data.footer.copyright}</span><span>Tüm hakları saklıdır</span></div></div></footer>`;
   });

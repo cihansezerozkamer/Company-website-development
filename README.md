@@ -54,3 +54,28 @@ Bu komut kart görsellerini ve PDF sayfa önizlemelerini yeniden üretir.
 ## Google Maps
 
 `siteData.map.embedUrl` değerini Google Maps'ten alınan embed URL ile değiştirin. URL'nin `output=embed` parametresi içermesi gerekir.
+
+## SEO ve statik sayfalar
+
+İşletme bilgileri ve ürünlerin kaynağı yine `data.js` dosyasıdır. Ürün, hizmet veya
+iletişim bilgilerini değiştirdikten sonra yayın öncesi aşağıdaki komutları çalıştırın:
+
+```powershell
+node scripts/build-seo.cjs
+python scripts/check-seo.py
+```
+
+İlk komut statik sayfa içeriklerini, başlık/açıklamaları, canonical ve paylaşım
+etiketlerini, JSON-LD işletme/ürün verilerini ve `sitemap.xml` dosyasını günceller.
+HTML dosyaları GitHub Pages için depoya kaydedilir; sunucuda Node veya Python gerekmez.
+Ürün sayfalarının `ups-*.html` dosyalarını elle değiştirmeyin; içerikleri tekrar üretilir.
+Ana sayfa ve diğer mevcut HTML sayfalarında işaretli `seo:*` alanları üreticiye aittir.
+Çekmeköy sayfasının metin kaynağı `scripts/build-seo.cjs` içindedir.
+
+İkinci komut tüm sayfaların başlık, H1, canonical, JSON-LD, sitemap, iç bağlantı,
+görsel ve doküman yollarını kontrol eder. Eski `urun-detay.html?urun=...` bağlantıları
+JavaScript ile ilgili yeni ürün sayfasına yönlenir; eski şablon dizine kapalıdır.
+GitHub Pages üzerinde sunucu tarafında 301 yönlendirme yapılandırılamadığı için bu
+adresler sitemap'ten çıkarılmıştır.
+
+Yapılan düzenlemeler ve Google tarafında kalan adım: `seo-yapilanlar.md`.
