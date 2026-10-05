@@ -70,3 +70,16 @@ Google resmi kaynakları:
 - Canlı `sitemap.xml` ve `robots.txt` yerel sürümlerle eşleşti.
 - Site: https://xn--istkesintisizg-tjb94a.com/
 - Çekmeköy sayfası: https://xn--istkesintisizg-tjb94a.com/cekmekoy-ups.html
+
+## Marka araması kontrolü — 5 Ekim 2026
+
+Kullanıcının “ist kesintisiz güç” Google aramasının görünen ilk sonuç sayfasında
+yeni alan adı yer almıyordu. Aynı oturumda `site:xn--istkesintisizg-tjb94a.com`
+aramasında ana sayfa bulundu. Gösterilen başlık hâlâ “ist kesintisiz güç |
+Kesintisiz Enerji Çözümleri”, açıklama da önceki ana sayfa metniydi.
+
+Sonuç: alan adı Google sonuçlarında mevcut; marka sorgusunda görünürlük henüz
+yetersiz. Güncel yayın ile Google'ın gösterdiği sonuç metni farklı. Bu gözlem son
+tarama tarihini belirlemez; kesin tarih için Search Console URL Denetimi gerekir.
+Bu oturumda özel Google hesaplarına erişilmedi ve tekrar indeksleme isteği gönderilmedi.
+Yeni bir teknik engel saptanmadığı için SEO kodu yeniden değiştirilmedi.
