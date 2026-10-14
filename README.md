@@ -70,10 +70,13 @@ etiketlerini, JSON-LD işletme/sayfa/hizmet verilerini ve `sitemap.xml` dosyası
 HTML dosyaları GitHub Pages için depoya kaydedilir; sunucuda Node veya Python gerekmez.
 Ürün sayfalarının `ups-*.html` dosyalarını elle değiştirmeyin; içerikleri tekrar üretilir.
 Ana sayfa ve diğer mevcut HTML sayfalarında işaretli `seo:*` alanları üreticiye aittir.
-Çekmeköy sayfasının metin kaynağı `scripts/build-seo.cjs` içindedir.
+Çekmeköy ve İstanbul UPS sayfalarının metin kaynağı `scripts/build-seo.cjs` içindedir.
+İstanbul sayfası kullanım alanı, ürün grubu, teklif bilgileri ve servis kapsamını
+açıklar; ana sayfa, hizmetler ve hem statik hem JavaScript alt bilgisinden bağlantı alır.
 
 İkinci komut tüm sayfaların başlık, H1, canonical, JSON-LD, sitemap, iç bağlantı,
-görsel ve doküman yollarını kontrol eder. Eski `urun-detay.html?urun=...` bağlantıları
+görsel ve doküman yollarını, ana sayfadan gerçek bağlantılarla erişilebilirliği
+kontrol eder. Eski `urun-detay.html?urun=...` bağlantıları
 JavaScript ile ilgili yeni ürün sayfasına yönlenir; eski şablon dizine kapalıdır.
 GitHub Pages üzerinde sunucu tarafında 301 yönlendirme yapılandırılamadığı için bu
 adresler sitemap'ten çıkarılmıştır.

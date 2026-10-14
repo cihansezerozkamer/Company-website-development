@@ -186,3 +186,32 @@ garantisi vermez.
 
 Resmi kaynak:
 https://developers.google.com/search/docs/appearance/structured-data/product-snippet
+
+## İstanbul UPS içeriği ve bağlantıları — 14 Ekim 2026
+
+Ana sayfanın marka odaklı başlığı ve H1'i korunarak İstanbul satış ve servis
+bölümü genişletildi. Yeni `istanbul-ups.html` sayfası, mevcut ürün gruplarına
+dayanarak bilgisayar/POS, sunucu, asansör ve endüstriyel kullanım alanlarını;
+güç, faz, aküden çalışma süresi, teklif bilgileri ve servis kapsamını açıklar.
+Hizmetler sayfasına servis talebi süreci eklendi. 7/24 desteğin Premium bakım
+kapsamında olduğu ana sayfada ve rehberde belirtildi.
+
+Yeni sayfa ana sayfa, hizmetler ve tüm sayfaların statik/JavaScript alt
+bilgisinden bağlantı alır. Kendine ait başlık, açıklama, canonical, İstanbul
+hizmet verisi ve breadcrumb ile sitemap'e eklendi. Sayfalar tekrar üretildi;
+sahte fiyat, değerlendirme, referans projesi veya ilçe kopyaları eklenmedi.
+
+Kontroller: 16 dizine açık sayfanın title, H1, canonical, JSON-LD, sitemap,
+yerel bağlantı ve varlık kontrolleri başarılı. Kontrol ana sayfadan gerçek
+HTML bağlantılarıyla erişilebilirliği de kapsar. Üretici ikinci çalıştırmada
+dosyaları değiştirmedi; JavaScript sözdizimi ve `git diff --check` başarılı.
+Bu bilgisayarda Node bulunmadığından aynı CommonJS üreticisi sistemin
+JavaScriptCore çalıştırıcısında geçici dosya sistemi adaptörüyle çalıştırıldı.
+Yayın mevcut `main` dalı / GitHub Pages akışıyla yapılır.
+
+Bu değişiklikler indekslenmeye uygun içeriği ve site içi keşfi iyileştirir.
+Google'ın belirli bir sorgu veya İstanbul IP'si için sıralama nedeni doğrudan
+raporlanmadığından, ilk sayfa görünürlüğünün düzeldiği iddia edilmez. Ülke
+parametreli arama gerçek Türkiye IP ölçümü değildir. Yerel işletme profilinin
+reddedilen video doğrulaması, işletmede yeni doğrulama videosu gerektiren ayrı
+bir adımdır; organik sıralamanın tek nedeni olduğu kanıtlanmamıştır.

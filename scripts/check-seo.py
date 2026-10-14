@@ -15,6 +15,7 @@ class Page(HTMLParser):
         self.meta = {}
         self.canonical = []
         self.refs = []
+        self.links = []
         self.ids = set()
         self.h1 = []
         self.title = ''
@@ -38,6 +39,8 @@ class Page(HTMLParser):
         for attr in ('href', 'src'):
             if attr in a:
                 self.refs.append(a[attr])
+        if tag == 'a' and 'href' in a:
+            self.links.append(a['href'])
         if tag == 'img':
             assert 'alt' in a, 'Görsel alt açıklaması eksik'
         if tag == 'main':
@@ -119,6 +122,26 @@ def check():
     for name, page in pages.items():
         if page.canonical and name != 'index.html':
             assert name in referenced, f'İç bağlantısı olmayan sayfa: {name}'
+    # Canonical etiketleri ve yalnızca birbirine bağlanan yetim sayfalar
+    # taranabilir bir ana sayfa yolu oluşturmaz; gerçek a bağlantılarını izleyin.
+    reached, pending = set(), ['index.html']
+    while pending:
+        filename = pending.pop()
+        if filename in reached:
+            continue
+        reached.add(filename)
+        for ref in pages[filename].links:
+            parts = urlsplit(ref)
+            if parts.scheme in ('mailto', 'tel', 'data') or (parts.netloc and parts.netloc != urlsplit(ORIGIN).netloc):
+                continue
+            target = unquote(parts.path).lstrip('/') or (filename if not parts.netloc else 'index.html')
+            if target.endswith('/'):
+                target += 'index.html'
+            if target in pages and target not in reached:
+                pending.append(target)
+    for name, page in pages.items():
+        if page.canonical:
+            assert name in reached, f'Ana sayfadan bağlantı yolu olmayan sayfa: {name}'
     robots = (ROOT / 'robots.txt').read_text(encoding='utf-8')
     assert f'Sitemap: {ORIGIN}/sitemap.xml' in robots
     assert 'Disallow: /' not in robots
