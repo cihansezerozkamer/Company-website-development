@@ -148,10 +148,9 @@ Google resmi kaynakları:
 ### Yayın durumu
 
 Mevcut yayın yolu `main` dalını GitHub'a gönderip GitHub Pages'in mevcut
-yayınını tetiklemektir. Terminalin GitHub bağlantısı DNS çözümleme hatasıyla
-başarısız oldu. GitHub bağlantısı da bu oturumda kurulu değil. Bu nedenle
-değişikliklerin GitHub'a gönderildiği, Pages yayınının tamamlandığı veya canlı
-HTML'in güncellendiği doğrulanamadı; yayın bekliyor.
+yayınını tetiklemektir. İlk terminal denemesi DNS çözümleme hatasıyla başarısız
+olmuştu. Sonraki Chrome kontrolünde ana sayfanın marka odaklı title ve H1
+değişikliklerinin canlı sitede bulunduğu doğrulandı; bu yayın artık beklemiyor.
 
 ## Canlı Search Console ürün verisi düzeltmesi — 14 Ekim 2026
 
@@ -174,8 +173,16 @@ kontrolle genişletildi. Kontrol eski dosyalardaki sorunu yakaladı; üreticinin
 yeniden çalıştırılmasından sonra 15 sayfanın kontrolleri başarılı oldu.
 
 Canlı ana sayfada marka odaklı title ve H1 doğrulandı. Önceki marka düzeltmesi
-yayında. Yeni ürün verisi düzeltmesinin yayın ve Google doğrulama sonucu,
-tamamlanmasının ardından ayrıca kaydedilecektir.
+yayında. Ürün verisi düzeltmesi `b1920d3` commit'iyle GitHub Desktop üzerinden
+`main` dalına gönderildi. Mevcut GitHub Pages akışı başarılı tamamlandı:
+https://github.com/cihansezerozkamer/Company-website-development/actions/runs/38593899886
+Canlı Line Interactive UPS sayfasında `Product` kaldırılmış; `LocalBusiness`,
+`WebSite`, `WebPage` ve `BreadcrumbList` korunmuş durumda.
+
+Search Console'da düzeltme doğrulaması gönderildi ve `Doğrulama Başladı`
+durumu, 14 Ekim 2026 başlangıç tarihiyle görüldü. Doğrulama henüz tamamlanmış
+değil. Bu yayın belirli bir marka sorgusunda görünme süresi veya sıralama
+garantisi vermez.
 
 Resmi kaynak:
 https://developers.google.com/search/docs/appearance/structured-data/product-snippet
