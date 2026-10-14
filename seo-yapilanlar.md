@@ -152,3 +152,30 @@ yayınını tetiklemektir. Terminalin GitHub bağlantısı DNS çözümleme hata
 başarısız oldu. GitHub bağlantısı da bu oturumda kurulu değil. Bu nedenle
 değişikliklerin GitHub'a gönderildiği, Pages yayınının tamamlandığı veya canlı
 HTML'in güncellendiği doğrulanamadı; yayın bekliyor.
+
+## Canlı Search Console ürün verisi düzeltmesi — 14 Ekim 2026
+
+Chrome bağlantısı üzerinden kullanıcı tarafından yetkilendirilen Search Console
+incelemesi yapıldı. İletiler bölümünde aynı tarihli ürün snippet'i uyarısı bulundu:
+`"offers", "review" veya "aggregateRating" belirtilmelidir`.
+Ürün raporundaki örnek, `ups-line-interactive-ups.html` üzerindeki
+`Line Interactive UPS` öğesiydi. Bu hata ürün zengin sonucuna uygunluğu etkiler;
+ana sayfanın normal marka sorgusundaki sıralamasının nedeni olduğu kanıtlanmadı.
+
+Kaynakta aynı eksik `Product` verisi sekiz ürün grubu/broşür sayfasında
+üretiliyordu. Sayfalarda yayınlanmış fiyat veya gerçek ürün değerlendirmesi
+bulunmadığı için bu işaretleme kaldırıldı. Sayfalar `WebPage`, `LocalBusiness`
+ve `BreadcrumbList` verilerini kullanmaya devam eder. Ürün metinleri, görseller,
+doküman bağlantıları, adresler ve dizine açıklık değişmedi.
+
+Önceki yerel kontrol JSON-LD sözdizimini doğruluyor, Google ürün snippet'inin
+zorunlu alanlarını kapsamıyordu. `scripts/check-seo.py` bu alanlara yönelik
+kontrolle genişletildi. Kontrol eski dosyalardaki sorunu yakaladı; üreticinin
+yeniden çalıştırılmasından sonra 15 sayfanın kontrolleri başarılı oldu.
+
+Canlı ana sayfada marka odaklı title ve H1 doğrulandı. Önceki marka düzeltmesi
+yayında. Yeni ürün verisi düzeltmesinin yayın ve Google doğrulama sonucu,
+tamamlanmasının ardından ayrıca kaydedilecektir.
+
+Resmi kaynak:
+https://developers.google.com/search/docs/appearance/structured-data/product-snippet

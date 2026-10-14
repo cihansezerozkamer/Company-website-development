@@ -55,7 +55,9 @@ function metadata(html, file, title, description, label, product) {
     graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, ...c })) });
   }
   if (file === 'hizmetler.html' || file === 'cekmekoy-ups.html') graph.push({ '@type': 'Service', name: label === 'Çekmeköy UPS' ? 'Çekmeköy UPS Satış ve Teknik Servis' : data.servicesTitle, description, url, provider: { '@id': businessId }, areaServed: { '@type': 'City', name: 'İstanbul' }, serviceType: ['UPS satışı ve kurulum', 'UPS teknik servis', 'Kesintisiz güç kaynağı bakımı'] });
-  if (product) graph.push({ '@type': 'Product', '@id': `${url}#product`, name: product.title, description: product.description, image: `${origin}/${asset(product.image)}`, url, category: 'UPS / Kesintisiz Güç Kaynağı', mainEntityOfPage: { '@id': `${url}#webpage` } });
+  // Ürün grubu/broşür sayfalarında yayınlanmış fiyat veya ürün değerlendirmesi yok.
+  // Google ürün snippet'i için offers, review veya aggregateRating gerekir.
+  // Bu sayfalar WebPage, LocalBusiness ve BreadcrumbList verileriyle tanımlanır.
   const imageUrl = `${origin}/${product ? asset(product.image) : 'assets/images/logo.png'}`;
   const block = `<!-- seo:metadata -->
   <meta name="description" content="${esc(description)}">

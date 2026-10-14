@@ -83,6 +83,11 @@ def check():
                 assert page.meta['og:url'] == expected, 'Paylaşım adresi canonical ile farklı'
                 assert page.schemas, 'Yapılandırılmış veri eksik'
                 graph = page.schemas[0]['@graph']
+                for node in graph:
+                    node_types = node['@type'] if isinstance(node['@type'], list) else [node['@type']]
+                    if 'Product' in node_types:
+                        assert any(node.get(key) for key in ('offers', 'review', 'aggregateRating')), \
+                            'Google ürün snippet\'i için offers, review veya aggregateRating gerekli'
                 business = next(n for n in graph if n['@type'] == 'LocalBusiness')
                 assert business['address']['addressLocality'] == 'Çekmeköy'
                 assert business['telephone'] == '+905422568003'
