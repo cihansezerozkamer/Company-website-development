@@ -22,7 +22,7 @@ const business = {
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '18:00' }]
 };
 const pages = {
-  'index.html': ['İstanbul UPS ve Kesintisiz Güç Kaynağı | İST Kesintisiz Güç', 'İST Kesintisiz Güç, Çekmeköy merkezinden İstanbul genelinde UPS satışı, kesintisiz güç kaynağı kurulumu, bakım ve 7/24 teknik servis desteği sunar.', 'Ana Sayfa'],
+  'index.html': [`${name} | İstanbul UPS Satışı ve Teknik Servis`, 'İST Kesintisiz Güç, Çekmeköy merkezinden İstanbul genelinde UPS satışı, kesintisiz güç kaynağı kurulumu, bakım ve 7/24 teknik servis desteği sunar.', 'Ana Sayfa'],
   'hizmetler.html': ['İstanbul UPS Servisi, Bakım ve Kurulum | İST Kesintisiz Güç', 'İstanbul UPS servisi: Çekmeköy merkezli teknik servis, arıza tespiti, periyodik bakım, akü kontrolü, UPS satışı ve kurulum hizmetlerimizi inceleyin.', 'Hizmetler'],
   'urunler.html': ['UPS ve Kesintisiz Güç Kaynakları | İstanbul İST Kesintisiz Güç', 'İstanbul için UPS ve kesintisiz güç kaynakları: Line Interactive, asansör, rack ve 6–800 kVA ürün gruplarını ve teknik dokümanlarını inceleyin.', 'Ürünlerimiz'],
   'iletisim.html': ['Çekmeköy UPS İletişim ve Adres | İST Kesintisiz Güç', 'Çekmeköy, Kirazlıdere’de İST Kesintisiz Güç. İstanbul UPS satış ve servis talepleriniz için 0542 256 80 03: adres, harita ve çalışma saatleri.', 'İletişim'],

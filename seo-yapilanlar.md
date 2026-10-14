@@ -83,3 +83,72 @@ yetersiz. Güncel yayın ile Google'ın gösterdiği sonuç metni farklı. Bu g�
 tarama tarihini belirlemez; kesin tarih için Search Console URL Denetimi gerekir.
 Bu oturumda özel Google hesaplarına erişilmedi ve tekrar indeksleme isteği gönderilmedi.
 Yeni bir teknik engel saptanmadığı için SEO kodu yeniden değiştirilmedi.
+
+## Marka görünürlüğü iyileştirmesi — 14 Ekim 2026
+
+### İnceleme bulguları
+
+- Kullanıcının aktardığı güncel Search Console incelemesine göre ana sayfa
+  dizinde; 13 Ekim'deki tarama başarılı. Canonical ve robots doğru, sitemap
+  başarılı, manuel işlem veya güvenlik sorunu yok. Tırnaklı marka aramasında
+  site bulunmuş, tırnaksız aramanın ilk sayfasında görülmemiş. Çekmeköy UPS
+  sayfasının dizine ekleme isteği kabul edilmiş. Bu oturumda Search Console
+  hesabına erişilmedi; bu bilgiler kullanıcının inceleme sonucudur.
+- Yerel kaynakta marka adı, WebSite ve LocalBusiness JSON-LD zaten mevcut.
+  Ancak ana sayfanın title değeri hizmetle başlıyor, ana H1 yalnızca hizmet
+  anlatıyordu. Markanın ana sayfadaki en belirgin metinlerde öne çıkarılması
+  için somut bir iyileştirme fırsatı bulundu.
+- Mevcut SEO doğrulayıcısı düzenleme öncesinde de başarılıydı: 15 dizine açık
+  sayfanın başlık, H1, canonical, JSON-LD, sitemap, iç bağlantı ve varlıkları
+  geçerliydi. Yerel kaynakta yeni bir dizine ekleme engeli saptanmadı.
+- Genel web aracı, kullanıcının Google'daki konumuna ve oturumuna ait sonuç
+  sırasını doğrulamaz. Canlı domain bu araçla okunamadı; terminalde domain ve
+  GitHub için DNS çözümlemesi başarısız oldu. Bu erişim hataları sitenin veya
+  GitHub'un dışarıdan kapalı olduğunu kanıtlamaz.
+
+### Uygulama ve kontroller
+
+- Ana sayfa başlığı: `İST Kesintisiz Güç | İstanbul UPS Satışı ve Teknik Servis`.
+  Başlık SEO üreticisinde `siteData.seo.name` kaynağından oluşturuluyor.
+- Ana H1: `İST Kesintisiz Güç`. Hemen altındaki metin İstanbul/Çekmeköy hizmet
+  alanını, UPS ve kesintisiz güç kaynağı satışını, kurulum, bakım ve 7/24
+  teknik servis desteğini anlatmaya devam ediyor.
+- Open Graph ve Twitter başlıkları ile WebPage JSON-LD adı aynı üreticiden
+  güncellendi. Üretilmiş dosyalardan yalnızca `index.html` değişti.
+- `python3 scripts/check-seo.py`: 15 sayfa için tüm kontroller başarılı.
+  `git diff --check` başarılı. JavaScript kaynaklarının sözdizimi doğrulandı.
+- Bu ortamda Node bulunmadığı için mevcut `scripts/build-seo.cjs` üreticisi
+  sistemin JavaScriptCore motorunda geçici dosya/VM adaptörüyle çalıştırıldı;
+  depoya ikinci bir üretim sistemi eklenmedi. Tekrar üretimin mevcut dosyalarla
+  aynı sonuç vermesi kontrol edildi. Tarayıcıyla görsel kontrol yapılmadı.
+- Çalışma başında kullanıcının izlenmeyen `.DS_Store` dosyası vardı; bu dosya
+  değişikliğe ve commit'e dahil edilmedi.
+
+### Beklenti ve takip
+
+Bu düzenleme marka adının ana sayfanın başlık ve görünen içeriğinde tutarlı ve
+belirgin olmasını sağlar. Önceki başlığın tırnaksız marka sorgusundaki düşük
+görünürlüğün kesin nedeni olduğu kanıtlanmadı; ilk sayfa veya belirli sıra
+garantisi yoktur. Google'ın değişiklikleri işlemesi yeniden tarama gerektirir.
+Google, başlık kaynaklarının yeniden işlenmesinin birkaç gün ile birkaç hafta
+alabileceğini belirtir; bu süre bir sıralama yükselişi taahhüdü değildir.
+
+Yayın sonrasında Search Console Performans raporunda `ist kesintisiz güç`
+marka sorgusunun gösterim, tıklama, CTR ve ortalama konumu, aynı ülke/cihaz
+filtreleriyle yayın öncesi ve sonrası dönemlerde karşılaştırılmalıdır. URL
+Denetimi'nden son tarama tarihi de izlenebilir. Bu oturumda yeni bir dizine
+ekleme isteği gönderilmedi.
+
+Google resmi kaynakları:
+- Başlık ve H1/og:title kaynakları:
+  https://developers.google.com/search/docs/appearance/title-link
+- Ana sayfada tutarlı marka adı ve WebSite verisi:
+  https://developers.google.com/search/docs/appearance/site-names
+
+### Yayın durumu
+
+Mevcut yayın yolu `main` dalını GitHub'a gönderip GitHub Pages'in mevcut
+yayınını tetiklemektir. Terminalin GitHub bağlantısı DNS çözümleme hatasıyla
+başarısız oldu. GitHub bağlantısı da bu oturumda kurulu değil. Bu nedenle
+değişikliklerin GitHub'a gönderildiği, Pages yayınının tamamlandığı veya canlı
+HTML'in güncellendiği doğrulanamadı; yayın bekliyor.
