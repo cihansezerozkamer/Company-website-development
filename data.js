@@ -65,6 +65,21 @@ map: {
   embedUrl: "https://www.google.com/maps?q=Fevzi%20Çakmak%20Cd%20No%3A11%2C%20Kirazlıdere%2C%2034788%20Çekmeköy%2Fİstanbul&output=embed",
   label: "Harita alanı — Kirazlıdere / Çekmeköy, İstanbul"
 },
+whatsapp: {
+  number: "905422568003",
+  title: "İST Kesintisiz Güç",
+  status: "7/24 WhatsApp destek",
+  teaser: "7/24 WhatsApp'tan yazın",
+  greeting: "Merhaba 👋 UPS satışı, arıza ve bakım konusunda size nasıl yardımcı olabiliriz? Bir konu seçin, WhatsApp'ta hazır mesajla devam edin.",
+  productMessage: "Merhaba, {product} hakkında bilgi ve fiyat teklifi almak istiyorum.",
+  defaultMessage: "Merhaba, bilgi almak istiyorum.",
+  options: [
+    { label: "🔧 Arıza / teknik servis", message: "Merhaba, UPS cihazımda arıza var, teknik servis desteği almak istiyorum." },
+    { label: "💰 Fiyat teklifi almak istiyorum", message: "Merhaba, UPS için fiyat teklifi almak istiyorum." },
+    { label: "🔋 Akü değişimi / periyodik bakım", message: "Merhaba, UPS akü değişimi ve periyodik bakım hakkında bilgi almak istiyorum." },
+    { label: "📦 Ürünler hakkında bilgi", message: "Merhaba, UPS ürünleriniz hakkında bilgi almak istiyorum." }
+  ]
+},
   footer: {
     description: "Çekmeköy merkezli İST Kesintisiz Güç: İstanbul genelinde UPS satışı, kesintisiz güç kaynağı kurulumu, teknik servis ve bakım hizmetleri.",
     copyright: "© 2026 İST Kesintisiz Güç Kaynakları ve Enerji Sistemleri San. Tic. Ltd. Şti."

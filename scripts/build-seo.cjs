@@ -44,7 +44,7 @@ const footer = `<footer class="footer"><div class="container footer-main"><div><
 function fill(html) {
   const slots = { 'data-products-title': data.productsTitle, 'data-services-title': data.servicesTitle, 'data-services-description': data.servicesDescription, 'data-products': cards, 'data-home-products': cards, 'data-services': services, 'data-reference-gallery': references, 'data-references-track': references, 'data-contact-description': esc(data.contact.description), 'data-contact-address': `${esc(data.contact.address)}<br>${esc(data.contact.city)}`, 'data-contact-phone': esc(data.contact.phone), 'data-contact-email': esc(data.contact.email), 'data-contact-hours': esc(data.contact.hours), 'data-footer': footer };
   for (const [attr, content] of Object.entries(slots)) html = slot(html, attr, content);
-  return html.replace(/20261004-(?:copy-1|products-2)|20261005-seo-1/g, '20261014-istanbul-1');
+  return html.replace(/20261004-(?:copy-1|products-2)|20261005-seo-1|20261014-istanbul-1/g, '20261028-whatsapp-1');
 }
 function metadata(html, file, title, description, label, product) {
   const url = file === 'index.html' ? `${origin}/` : `${origin}/${file}`;
