@@ -152,8 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const product = data.products.find((item) => item.id === productId);
     if (!product) { content.textContent = "Ürün bulunamadı."; return; }
     if (!document.body.dataset.productId) { location.replace(product.url); return; }
-    document.querySelector("[data-document-title]").textContent = product.title;
-    document.querySelector("[data-document-description]").textContent = product.description;
+    document.querySelector("[data-document-title]").textContent = product.heading || product.title;
+    document.querySelector("[data-document-description]").textContent = product.lead || product.description;
     const download = document.querySelector("[data-document-download]");
     if (!product.document) {
       download.hidden = true;
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slot.outerHTML = `<footer class="footer"><div class="container footer-main">
       <div><a class="brand" href="index.html"><img class="brand-logo" src="assets/images/logo.png" alt="ist kesintisiz güç"></a><p style="margin-top:20px">${data.footer.description}</p></div>
       <div><h3>Kurumsal</h3><a href="index.html">Ana Sayfa</a><a href="kurumsal.html">Kurumsal</a><a href="urunler.html">Ürünler</a><a href="hizmetler.html">Servis &amp; Bakım</a><a href="referanslar.html">Referanslar</a><a href="iletisim.html">İletişim</a></div>
-      <div><h3>Hizmetler</h3><a href="urunler.html">UPS Satışı</a><a href="hizmetler.html">Standart Bakım</a><a href="hizmetler.html">Premium Bakım</a><a href="hizmetler.html">Teknik Servis</a><a href="istanbul-ups.html">İstanbul UPS ve Güç Kaynağı</a><a href="cekmekoy-ups.html">Çekmeköy UPS Satış ve Servis</a></div>
+      <div><h3>Hizmetler</h3><a href="urunler.html">UPS Satışı</a><a href="hizmetler.html">Standart Bakım</a><a href="hizmetler.html">Premium Bakım</a><a href="hizmetler.html">Teknik Servis</a><a href="istanbul-ups.html">UPS Seçim ve Teklif Rehberi</a><a href="cekmekoy-ups.html">Çekmeköy UPS Satış ve Servis</a></div>
       <div><h3>İletişim</h3><p>⌖ <span data-contact-address></span></p><p>⌕ <span data-contact-phone></span></p><p>✉ <span data-contact-email></span></p></div>
     </div><div class="footer-bottom"><div class="container"><span>${data.footer.copyright}</span><span>Tüm hakları saklıdır</span></div></div></footer>`;
   });
@@ -315,9 +315,26 @@ document.addEventListener("DOMContentLoaded", () => {
   renderWhatsApp();
 
   const form = document.querySelector("#contact-form");
-  if (form) form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    form.querySelector(".notice").style.display = "block";
-    form.reset();
-  });
+  if (form) {
+    // Ürün sayfasındaki "Teklif formu" bağlantısı (?urun=id) konuyu önceden doldurur.
+    const requested = data.products.find((item) => item.id === new URLSearchParams(location.search).get("urun"));
+    if (requested) form.elements.konu.value = `${requested.heading || requested.title} teklifi`;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const value = (name) => form.elements[name].value.trim();
+      const lines = [
+        "Merhaba, web sitenizden teklif talebi:",
+        `Ad Soyad: ${value("ad")}`,
+        value("firma") && `Firma: ${value("firma")}`,
+        value("telefon") && `Telefon: ${value("telefon")}`,
+        value("ilce") && `İlçe: ${value("ilce")}`,
+        `Konu: ${value("konu")}`,
+        `Mesaj: ${value("mesaj")}`
+      ].filter(Boolean);
+      const url = `https://wa.me/${data.whatsapp.number}?text=${encodeURIComponent(lines.join("\n"))}`;
+      form.querySelector("[data-contact-wa-fallback]").href = url;
+      form.querySelector(".notice").style.display = "block";
+      if (!window.open(url, "_blank", "noopener")) location.href = url;
+    });
+  }
 });

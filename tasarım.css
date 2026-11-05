@@ -398,3 +398,14 @@ textarea.field { min-height: 130px; resize: vertical; }
 }
 @media (prefers-reduced-motion: reduce) { .wa-panel { animation: none; } .wa-toggle { transition: none; } }
 @media print { .wa-widget { display: none; } }
+
+/* Ürün teknik tablosu, karşılaştırma ve referans listesi */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.spec-table { width: 100%; margin: 1rem 0; border-collapse: collapse; background: #fff; }
+.spec-table th, .spec-table td { padding: 10px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.spec-table tbody th { width: 34%; font-weight: 600; background: #f6f8fa; }
+.compare-table thead th { background: #f6f8fa; }
+.compare-table tbody th { width: auto; }
+.document-heading { margin-top: 42px; font-size: clamp(1.4rem, 3vw, 2rem); }
+.reference-names { columns: 2 220px; padding-left: 1.2rem; }
+.btn-whatsapp.full { color: #fff; }
